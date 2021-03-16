@@ -13,6 +13,7 @@ module Pushbullet
     attr_reader :api_key
 
     def initialize(api_key: ENV['PUSHBULLET_API_KEY'])
+      raise 'We need a pushbullet api key to function' if api_key.blank?
       @api_key = api_key
     end
   end
