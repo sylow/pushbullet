@@ -4,14 +4,12 @@ PushBullet's API enables developers to push to devices that have installed the P
 ## Installation
 	gem 'pushbullet'
 
-#### Setup Client
-copy following content and paste into config/initializers/pushbullet.rb
-	
-	PUSHBULLET_API_KEY = 'YOUR_PUSHBULLET_KEY_HERE'
-
 #### Usage
-	client = Pushbullet::Client.new(PUSHBULLET_API_KEY)
-
+	client = Pushbullet::Client.new(api_key: PUSHBULLET_API_KEY)
+	or
+	# set enviromental key PUSHBULLET_API_KEY=to_your_key and ...
+	client = Pushbullet::Client.new
+		
 #### Push to own device
 
 You can send following list:
