@@ -12,7 +12,7 @@ module Pushbullet
 
     attr_reader :api_key
 
-    def initialize(api_key)
+    def initialize(api_key: ENV['PUSHBULLET_API_KEY'])
       @api_key = api_key
     end
   end
